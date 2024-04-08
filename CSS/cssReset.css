@@ -9,6 +9,7 @@
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
+  font-size: 62.5%; /* 10px = 1rem! */
   text-size-adjust: none;
 }
 
@@ -18,6 +19,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -35,7 +38,21 @@ ol[role="list"] {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  font-size: 16px; /* px fallback */
+  font-size: 1.6rem; /* default font-size for document */
   line-height: 1.5;
+}
+
+/* for everything else, rem = px/10 */
+footer {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+/* you can safely nest rems, it's still 1rem = 10px */
+footer small {
+  font-size: 10px;
+  font-size: 1rem;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -43,6 +60,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 button,
 input,
 label {
@@ -53,8 +72,15 @@ label {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
 }
 
 /* A elements that don't have a class get default styles */
@@ -87,4 +113,12 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/*   */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
 }
