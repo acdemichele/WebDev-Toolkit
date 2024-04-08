@@ -6,4 +6,4 @@ This repository provides essential web development resources, styling templates,
 
 ### [CSS](https://github.com/acdemichele/WebDev-Toolkit/tree/main/CSS)
 
-[A (More) Modern CSS Reset](https://github.com/acdemichele/WebDev-Toolkit/blob/main/CSS/meyerReset.css)
+[A (More) Modern CSS Reset](https://github.com/acdemichele/WebDev-Toolkit/blob/main/CSS/moreModernCSSReset.css)
